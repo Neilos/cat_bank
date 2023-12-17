@@ -8,4 +8,5 @@ class MoneyTransactionItem < ApplicationRecord
              optional: true
 
   monetize :amount_cents, with_currency: :seu
+  monetize :account_balance_cents, with_currency: :seu
 end

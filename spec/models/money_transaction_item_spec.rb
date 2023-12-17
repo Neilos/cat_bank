@@ -21,4 +21,8 @@ RSpec.describe MoneyTransactionItem do
   describe 'amount' do
     it { is_expected.to monetize(:amount).with_currency(:seu) }
   end
+
+  describe 'account_balance' do
+    it { is_expected.to monetize(:account_balance).with_currency(:seu) }
+  end
 end
