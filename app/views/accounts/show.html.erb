@@ -10,3 +10,6 @@
     <td><%= account_balance(@money_transaction_items.first) %></td>
   </tr>
 </table>
+
+<%= render partial: 'account_transactions',
+           locals: { money_transaction_items: @money_transaction_items } %>

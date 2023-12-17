@@ -5,6 +5,8 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
     @money_transaction_items = MoneyTransactionItem
                                .where(account: @account)
+                               .joins(:money_transaction)
+                               .eager_load(:money_transaction)
                                .order(id: :desc)
   end
 end
