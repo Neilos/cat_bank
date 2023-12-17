@@ -1,30 +1,32 @@
-<table>
-  <caption>
-    <h2>Transactions</h2>
-  </caption>
+<figure>
+  <table>
+    <caption>
+      <h2>Transactions</h2>
+    </caption>
 
-  <thead>
-    <tr>
-      <th>Time</th>
-      <th>Ref</th>
-      <th>Description</th>
-      <th>Amount</th>
-      <th>Balance</th>
-    </tr>
-  </thead>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Ref</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
 
-  <% money_transaction_items.each do |item| %>
-    <%- transaction = item.money_transaction %>
+    <% money_transaction_items.each do |item| %>
+      <%- transaction = item.money_transaction %>
 
-    <tr>
-      <td><%= time_ago_in_words(transaction.created_at) %> ago</td>
-      <td><%= transaction.reference %></td>
-      <td><%= transaction.description %></td>
-      <td><%= item.amount.format %></td>
-      <td><%= item.account_balance.format %></td>
-    </tr>
-  <% end %>
+      <tr>
+        <td><%= time_ago_in_words(transaction.created_at) %> ago</td>
+        <td><%= transaction.reference %></td>
+        <td><%= transaction.description %></td>
+        <td><%= item.amount.format %></td>
+        <td><%= item.account_balance.format %></td>
+      </tr>
+    <% end %>
 
-</table>
+  </table>
 
-<%= paginate money_transaction_items %>
+  <%= paginate money_transaction_items %>
+</figure>
