@@ -10,10 +10,36 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+# users
+user1 = FactoryBot.create(
+  :user,
+  email: 'rich@example.com',
+  password: 'Password123!!',
+  password_confirmation: 'Password123!!'
+)
+user2 = FactoryBot.create(
+  :user,
+  email: 'poor@example.com',
+  password: 'Password123!!',
+  password_confirmation: 'Password123!!'
+)
+
 # accounts
-system_account = FactoryBot.create(:account)
-user_account1 = FactoryBot.create(:account)
-FactoryBot.create(:account)
+system_account = FactoryBot.create(
+  :account,
+  user: nil, # The system account doesn't belong to any user
+  reference: '4605e852-61b3-47da-9de5-8068fa7172ac'
+)
+user_account1 = FactoryBot.create(
+  :account,
+  user: user1,
+  reference: '0f85a4fb-0f5e-479e-898b-b57866b08b9e'
+)
+FactoryBot.create(
+  :account,
+  user: user2,
+  reference: 'c3c7f394-3569-4c95-b4ab-9232e21079dc'
+)
 
 # money_transactions
 money_transaction1 = FactoryBot.create(
