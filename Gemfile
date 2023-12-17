@@ -7,6 +7,9 @@ ruby '3.2.2'
 # Use main development branch of Rails
 gem 'rails', '~>7.1.2'
 
+# Elegant handling of money
+gem 'money-rails'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
