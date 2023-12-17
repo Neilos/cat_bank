@@ -1,0 +1,12 @@
+<h1>Account</h1>
+
+<table>
+  <tr>
+    <th>Account Reference</th>
+    <td><%= @account.reference %></td>
+  </tr>
+  <tr>
+    <th>Account Balance</th>
+    <td><%= account_balance(@money_transaction_items.first) %></td>
+  </tr>
+</table>
