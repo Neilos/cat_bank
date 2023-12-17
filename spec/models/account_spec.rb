@@ -12,4 +12,8 @@ RSpec.describe Account do
       expect(account_reference).not_to be_blank
     end
   end
+
+  describe 'associations' do
+    it { is_expected.to belong_to(:user).optional }
+  end
 end
