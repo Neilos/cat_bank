@@ -67,6 +67,6 @@ Rails.application.configure do
   config.after_initialize do
     Bullet.enable = true
     Bullet.skip_html_injection = false
-    Bullet.raise
+    Bullet.raise = true
   end
 end
