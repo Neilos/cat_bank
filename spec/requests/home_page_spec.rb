@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'HomePages', type: :request do
+RSpec.describe 'HomePages' do
   describe 'GET /show' do
     it 'returns http success' do
       get '/'

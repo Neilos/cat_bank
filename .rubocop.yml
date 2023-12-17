@@ -17,6 +17,9 @@ inherit_from: .rubocop_todo.yml
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
+AllCops:
+  NewCops: enable
+
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/development.rb'
