@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_17_114454) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_17_122013) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -20,6 +20,14 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_17_114454) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["reference"], name: "index_accounts_on_reference", unique: true
+  end
+
+  create_table "money_transactions", force: :cascade do |t|
+    t.uuid "reference", default: -> { "gen_random_uuid()" }
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reference"], name: "index_money_transactions_on_reference", unique: true
   end
 
 end
