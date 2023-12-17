@@ -80,7 +80,7 @@ MoneyRails.configure do |config|
   #
   # set to BigDecimal::ROUND_HALF_EVEN by default
   #
-  # config.rounding_mode = BigDecimal::ROUND_HALF_UP
+  config.rounding_mode = BigDecimal::ROUND_HALF_UP
 
   # Set default money format globally.
   # Default value is nil meaning "ignore this option".
@@ -105,7 +105,7 @@ MoneyRails.configure do |config|
   #
   # For the legacy behaviour of "per currency" localization (formatting depends
   # only on currency):
-  # config.locale_backend = :currency
+  config.locale_backend = :currency
   #
   # Example:
   # Money.new(10_000_00, 'USD').format # => $10,000.00
@@ -122,5 +122,3 @@ MoneyRails.configure do |config|
   # Example:
   # config.raise_error_on_money_parsing = false
 end
-
-Money.locale_backend = :currency
