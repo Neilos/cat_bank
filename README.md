@@ -46,6 +46,8 @@ To run a development server, run the following from the root of the project dire
 bin/rails server
 ```
 
+The app will be available locallys at http://localhost:3000/
+
 
 ## Tests
 
