@@ -49,4 +49,8 @@ bin/rails server
 
 ## Tests
 
-TBC
+To run the full test suite:
+
+```ruby
+bundle exec rspec
+```
