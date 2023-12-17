@@ -8,5 +8,6 @@ class AccountsController < ApplicationController
                                .joins(:money_transaction)
                                .eager_load(:money_transaction)
                                .order(id: :desc)
+                               .page params[:page]
   end
 end
