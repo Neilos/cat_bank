@@ -15,3 +15,14 @@ inherit_from: .rubocop_todo.yml
 # where the inspected file is and continue its way up to the root directory.
 #
 # See https://docs.rubocop.org/rubocop/configuration
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/development.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'app/helpers/application_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/models/application_record.rb'
+    - 'config/application.rb'
