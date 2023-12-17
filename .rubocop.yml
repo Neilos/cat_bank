@@ -26,3 +26,16 @@ Metrics/BlockLength:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/system/**/*'
+
+RSpec/MultipleMemoizedHelpers:
+  Exclude:
+    - 'spec/system/**/*'
+
+RSpec/IndexedLet:
+  Enabled: false
+
+
