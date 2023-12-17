@@ -1,24 +1,52 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Project Overview
 
-* Ruby version
+A toy banking application.
 
-* System dependencies
 
-* Configuration
+## System dependencies
 
-* Database creation
+- Ruby (See .ruby-version file for the exact Ruby version)
+- Postgresql
 
-* Database initialization
+(See Dockerfile for further details)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database creation
 
-* Deployment instructions
+To create both the test and development databases:
 
-* ...
+```zsh
+bin/rails db:create
+```
+
+
+## Database setup
+
+To ensure the database is setup:
+ 
+```zsh
+bin/rails db:prepare
+```
+
+...or to destructively reset the database:
+
+```zsh
+bin/rails db:reset
+```
+
+
+## Development
+
+To run a development server, run the following from the root of the project directory:
+
+```zsh
+bin/rails server
+```
+
+
+## Tests
+
+TBC
