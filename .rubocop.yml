@@ -41,4 +41,7 @@ RSpec/ExampleLength:
 RSpec/IndexedLet:
   Enabled: false
 
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/devise.rb'
 

@@ -7,6 +7,9 @@ ruby '3.2.2'
 # Use main development branch of Rails
 gem 'rails', '~>7.1.2'
 
+# Authenitcation
+gem 'devise'
+
 # Elegant handling of money
 gem 'money-rails'
 
