@@ -17,4 +17,8 @@ RSpec.describe MoneyTransactionItem do
       )
     end
   end
+
+  describe 'amount' do
+    it { is_expected.to monetize(:amount).with_currency(:seu) }
+  end
 end
