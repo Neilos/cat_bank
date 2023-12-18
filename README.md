@@ -65,23 +65,23 @@ For testing in development, there is the following seed data.
 
 ```yml
 user1:
-  email: 'rich@example.com'
-  password: 'Password123!!'
+  email: rich@example.com
+  password: Password123!!
 
 user2:
-  email: 'poor@example.com'
-  password: 'Password123!!'
+  email: poor@example.com
+  password: Password123!!
 ```
 
 ### Accounts:
 
 ```yml
 system_account:
-  reference: '4605e852-61b3-47da-9de5-8068fa7172ac'
+  reference: 4605e852-61b3-47da-9de5-8068fa7172ac
 
 user1_account:
-  reference: '0f85a4fb-0f5e-479e-898b-b57866b08b9e'
+  reference: 0f85a4fb-0f5e-479e-898b-b57866b08b9e
 
 user2_account:
-  reference: 'c3c7f394-3569-4c95-b4ab-9232e21079dc'
+  reference: c3c7f394-3569-4c95-b4ab-9232e21079dc
 ```
