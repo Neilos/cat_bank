@@ -27,6 +27,12 @@ Metrics/BlockLength:
 Style/Documentation:
   Enabled: false
 
+Style/HashSyntax:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
 RSpec/MultipleExpectations:
   Exclude:
     - 'spec/system/**/*'
