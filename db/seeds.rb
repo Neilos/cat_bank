@@ -35,7 +35,7 @@ user_account1 = FactoryBot.create(
   user: user1,
   reference: '0f85a4fb-0f5e-479e-898b-b57866b08b9e'
 )
-FactoryBot.create(
+user_account2 = FactoryBot.create(
   :account,
   user: user2,
   reference: 'c3c7f394-3569-4c95-b4ab-9232e21079dc'
@@ -44,12 +44,17 @@ FactoryBot.create(
 # money_transactions
 money_transaction1 = FactoryBot.create(
   :money_transaction,
-  description: 'opening balance',
+  description: 'sign up award',
   created_at: 2.days.ago
 )
 money_transaction2 = FactoryBot.create(
   :money_transaction,
   description: 'fee',
+  created_at: 1.day.ago
+)
+money_transaction3 = FactoryBot.create(
+  :money_transaction,
+  description: 'sign up award',
   created_at: 1.day.ago
 )
 
@@ -58,15 +63,22 @@ FactoryBot.create(
   :money_transaction_item,
   account: system_account,
   money_transaction: money_transaction1,
-  amount: -16.to_money(:seu),
-  account_balance: -16.to_money(:seu)
+  amount: -100.to_money(:seu),
+  account_balance: -100.to_money(:seu)
 )
 FactoryBot.create(
   :money_transaction_item,
   account: system_account,
   money_transaction: money_transaction2,
   amount: 2.to_money(:seu),
-  account_balance: -14.to_money(:seu)
+  account_balance: -98.to_money(:seu)
+)
+FactoryBot.create(
+  :money_transaction_item,
+  account: system_account,
+  money_transaction: money_transaction3,
+  amount: -100.to_money(:seu),
+  account_balance: -100.to_money(:seu)
 )
 
 # user_account1 money_transaction_items
@@ -74,20 +86,20 @@ FactoryBot.create(
   :money_transaction_item,
   money_transaction: money_transaction1,
   account: user_account1,
-  amount: 10.to_money(:seu),
-  account_balance: 10.to_money(:seu)
-)
-FactoryBot.create(
-  :money_transaction_item,
-  account: user_account1,
-  money_transaction: money_transaction1,
-  amount: 6.to_money(:seu),
-  account_balance: 16.to_money(:seu)
+  amount: 100.to_money(:seu),
+  account_balance: 100.to_money(:seu)
 )
 FactoryBot.create(
   :money_transaction_item,
   money_transaction: money_transaction2,
   account: user_account1,
   amount: -2.to_money(:seu),
-  account_balance: 14.to_money(:seu)
+  account_balance: 98.to_money(:seu)
+)
+FactoryBot.create(
+  :money_transaction_item,
+  money_transaction: money_transaction3,
+  account: user_account2,
+  amount: 100.to_money(:seu),
+  account_balance: 100.to_money(:seu)
 )
