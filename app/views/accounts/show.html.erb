@@ -11,5 +11,7 @@
   </tr>
 </table>
 
+<%= link_to 'Make a Payment', new_account_payments_path(@account) %>
+
 <%= render partial: 'account_transactions',
            locals: { money_transaction_items: @money_transaction_items } %>
