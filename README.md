@@ -85,3 +85,21 @@ user1_account:
 user2_account:
   reference: c3c7f394-3569-4c95-b4ab-9232e21079dc
 ```
+
+## To do
+
+- Refactors
+  + Encapsulate queries to scopes
+  + More helper methods in controllers (or more service objects)
+  + Extract account creation logic from AccountsController
+  + etc...
+- More validations
+  + payment amount not more than account balance
+  + payment not from and to the same account
+  + etc...
+- More tests
+  + Unit tests for Payment model
+  + Unit tests for MoneyTransactionCreationService
+  + multiple simultaneous payments involving the same accounts
+- Better styling of views
+- Sort out favicon
